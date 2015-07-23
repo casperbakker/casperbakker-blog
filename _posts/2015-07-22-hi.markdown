@@ -1,0 +1,11 @@
+---
+layout: post
+title:  "Hi there"
+date:   2015-07-22 14:04:03
+categories: personal
+---
+After years without a personal blog, I thought it would be fun to start a blog again. In the last months I had some technical tips to share, but no place to share it. And with Medium being so bloated lately, that was not an option.
+
+So here I am. Writing in Markdown my first new blog, powered by Jekyll. And for the first time in English, to help me get used to writing in English as a Dutchie.
+
+For the last months I exclusively work with Laravel, PHP, Amazon AWS and a lot of external API's. So there is enough for me to share about.

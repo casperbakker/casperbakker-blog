@@ -1,0 +1,14 @@
+# Site settings
+title: Casper Bakker
+description: >
+  This is my personal blog, to share things I learned working with PHP, Laravel, Amazon AWS and more. - Casper Bakker
+baseurl: "/blog" # the subpath of your site, e.g. /blog/
+url: "http://casperbakker.com" # the base hostname & protocol for your site
+twitter_username: casperbakker
+github_username:  casperbakker
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:title/
+timezone: Europe/Amsterdam
+paginate: 5
