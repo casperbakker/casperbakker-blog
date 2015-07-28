@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Hi there"
-date:   2015-07-22 14:04:03
+title: Hi there
+date: 2015-07-27 14:04:03
+description: After years without a personal blog, I thought it would be fun to start a blog again.
 categories: personal
 ---
 After years without a personal blog, I thought it would be fun to start a blog again. In the last months I had some technical tips to share, but no place to share it. And with Medium being so bloated lately, that was not an option.

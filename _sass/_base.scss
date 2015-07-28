@@ -1,3 +1,11 @@
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@function em($target, $context: $base-font-size) {
+    @return strip-unit($target) / strip-unit($context) * 1em;
+}
+
 /**
  * Reset some basic elements
  */
@@ -89,7 +97,6 @@ h1, h2, h3, h4, h5, h6 {
  */
 a {
     color: $brand-color;
-    text-decoration: none;
 
     &:visited {
         color: darken($brand-color, 15%);
@@ -110,11 +117,11 @@ blockquote {
     color: $grey-color;
     border-left: 4px solid $grey-color-light;
     padding-left: $spacing-unit / 2;
-    font-size: 18px;
+    font-size: em(18);
     letter-spacing: -1px;
     font-style: italic;
 
-    > :last-child {
+    > :last-child {//
         margin-bottom: 0;
     }
 }
@@ -124,30 +131,19 @@ blockquote {
 /**
  * Code formatting
  */
-pre,
-code {
-    font-size: 15px;
-    border: 1px solid $grey-color-light;
-    border-radius: 3px;
-    background-color: #f2f2f2;
-}
-
-code {
-    padding: 1px 5px;
-}
-
 pre {
-    padding: 8px 12px;
+    padding: 0.5em 1em;
     overflow-x: scroll;
+}
 
-    > code {
-        border: 0;
-        padding-right: 0;
-        padding-left: 0;
+div.highlight {
+    pre {
+        font-size: em(14);
+        border: 1px solid $grey-color-light;
+        border-radius: em(3, 15);
+        background-color: #f2f2f2;
     }
 }
-
-
 
 /**
  * Wrapper
@@ -192,8 +188,8 @@ pre {
 
     > svg {
         display: inline-block;
-        width: 16px;
-        height: 16px;
+        width: 1em;
+        height: 1em;
         vertical-align: middle;
 
         path {

@@ -1,0 +1,24 @@
+---
+layout: post
+title:  "Love code"
+date:   2015-07-22 14:04:03
+categories: personal
+---
+{% highlight php startinline=true %}
+public function handle($request, Closure $next)
+{
+    if ($request->header('Authorization')) {
+        $token = explode(' ', $request->header('Authorization'))[1];
+
+        $payload = (array) JWT::decode($token, env('JWT_KEY'), ['HS256']);
+
+        if ($payload['exp'] < time()) {
+            return response()->json(['message' => 'Token has expired']);
+        }
+
+        Auth::onceUsingId($payload['sub']);
+    }
+
+    return $next($request);
+}
+{% endhighlight %}
