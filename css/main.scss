@@ -15,7 +15,7 @@ $spacing-unit:     30px;
 
 $text-color:       #333;
 $background-color: #fff;
-$brand-color: #0065e2;
+$brand-color:      #0065e2;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -47,6 +47,7 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
+        "syntax-highlighting",
         "layout",
-        "syntax-highlighting"
+        "content-specific"
 ;

@@ -7,6 +7,7 @@ url: "http://casperbakker.com" # the base hostname & protocol for your site
 twitter_username: casperbakker
 github_username:  casperbakker
 author: Casper Bakker
+gems: [jekyll-paginate, jekyll-assets]
 
 # Build settings
 markdown: kramdown
